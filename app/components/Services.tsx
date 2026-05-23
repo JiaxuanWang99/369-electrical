@@ -22,7 +22,7 @@ export default function ServicesPreview() {
 
           {/* Residential */}
           <a
-            href="/services#residential"
+            href="/servicesE#residential"
             className="
               bg-white/5 backdrop-blur-md
               border border-white/10
