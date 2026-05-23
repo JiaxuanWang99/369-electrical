@@ -48,7 +48,7 @@ export default function ServicesPreview() {
 
           {/* Commercial */}
           <Link
-            href="/services#commercial"
+            href="/servicesE#commercial"
             className="
               bg-white/5 backdrop-blur-md
               border border-white/10
