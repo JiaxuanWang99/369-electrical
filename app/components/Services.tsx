@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function ServicesPreview() {
   return (
     <section className="relative text-white py-24 overflow-hidden">
@@ -21,7 +23,7 @@ export default function ServicesPreview() {
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Residential */}
-          <a
+          <link
             href="/servicesE#residential"
             className="
               bg-white/5 backdrop-blur-md
@@ -42,10 +44,10 @@ export default function ServicesPreview() {
             <span className="mt-6 inline-block text-sm text-brand-yellow">
               View Residential Services →
             </span>
-          </a>
+          </link>
 
           {/* Commercial */}
-          <a
+          <link
             href="/services#commercial"
             className="
               bg-white/5 backdrop-blur-md
@@ -66,7 +68,7 @@ export default function ServicesPreview() {
             <span className="mt-6 inline-block text-sm text-brand-yellow">
               View Commercial Services →
             </span>
-          </a>
+          </link>
 
         </div>
 
