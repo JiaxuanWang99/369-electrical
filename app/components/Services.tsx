@@ -23,7 +23,7 @@ export default function ServicesPreview() {
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Residential */}
-          <link
+          <Link
             href="/servicesE#residential"
             className="
               bg-white/5 backdrop-blur-md
@@ -44,10 +44,10 @@ export default function ServicesPreview() {
             <span className="mt-6 inline-block text-sm text-brand-yellow">
               View Residential Services →
             </span>
-          </link>
+          </Link>
 
           {/* Commercial */}
-          <link
+          <Link
             href="/services#commercial"
             className="
               bg-white/5 backdrop-blur-md
@@ -68,7 +68,7 @@ export default function ServicesPreview() {
             <span className="mt-6 inline-block text-sm text-brand-yellow">
               View Commercial Services →
             </span>
-          </link>
+          </Link>
 
         </div>
 
