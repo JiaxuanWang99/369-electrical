@@ -54,7 +54,7 @@ function HighlightText({ text, highlight }: HighlightTextProps) {
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative bg-brand-black text-white py-20 overflow-hidden">
+    <section className="relative bg-brand-black text-white py-10 overflow-hidden">
 
       {/* soft white center glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.10),transparent_65%)]" />
