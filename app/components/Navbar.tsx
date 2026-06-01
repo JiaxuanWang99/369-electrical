@@ -8,24 +8,24 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-black/95 backdrop-blur-md border-b border-brand-mid">
+    <header className="sticky top-0 z-50 bg-brand-black/85 backdrop-blur-md border-b border-brand-mid">
 
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.jpg" alt="logo" width={40} height={40} />
+          <Image src="/logo.jpg" alt="logo" width={70} height={70} />
           <span className="text-brand-yellow font-bold">
             369 Electrical
           </span>
         </Link>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden md:flex gap-8 text-white/70 font-bold">
-          <Link href="/">Home</Link>
-          <Link href="/servicesE">Services</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+        <nav className="hidden md:flex gap-8 text-white/90 font-bold ">
+          <Link className="hover:text-brand-yellow" href="/">Home</Link>
+          <Link className="hover:text-brand-yellow" href="/servicesE">Services</Link>
+          <Link className="hover:text-brand-yellow" href="/about">About</Link>
+          <Link className="hover:text-brand-yellow"href="/contact">Contact</Link>
         </nav>
 
         {/* CTA */}

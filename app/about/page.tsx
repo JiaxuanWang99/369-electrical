@@ -1,81 +1,113 @@
 import CTA from "../components/CTA"
 import FAQ from "../components/FAQ"
+import Carousel from "../components/Carousel"
 
 export default function AboutPage() {
   return (
     <main className="bg-brand-black text-white overflow-hidden">
 
-      {/* ================= HERO ================= */}
-      <section className="relative py-28 overflow-hidden">
+      {/* ================= HERO + STORY ================= */}
+      <section className="relative py-24 overflow-hidden text-center">
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,208,0,0.08),transparent_60%)]" />
 
-        <div className="max-w-6xl mx-auto px-6 relative">
+        <div className="max-w-4xl mx-auto px-6 relative">
 
-          <div className="max-w-3xl">
+          {/* brand label */}
+          <p className="text-brand-yellow font-semibold tracking-wide uppercase text-sm">
+            About 369 Electrical Service
+          </p>
 
-            <p className="text-brand-yellow font-semibold tracking-wide uppercase text-sm">
-              About 369 Electrical Service
-            </p>
+          {/* main title */}
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mt-4 max-w-3xl mx-auto">
+            Trusted Local Electricians in{" "}
+            <span className="text-brand-yellow">Brisbane</span>
+          </h1>
 
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-4">
-              Trusted Electricians in{" "}
-              <span className="text-brand-yellow">Brisbane</span>
-            </h1>
+          {/* subtitle */}
+          <p className="mt-6 text-xl text-white/75 leading-relaxed">
+            Licensed electricians delivering safe, reliable electrical work across homes and businesses.
+          </p>
 
-            <p className="mt-6 text-white/80 text-lg leading-relaxed">
-              369 Electrical Service provides reliable residential,
-              commercial, and emergency electrical solutions across Brisbane
-              and surrounding areas. Our licensed electricians are committed
-              to safe workmanship, fast response times, and professional service.
-            </p>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= IMAGE SECTION ================= */}
-      <section className="py-5 bg-[#0d0d0d]">
-
-        <div className="max-w-6xl mx-auto px-6">
-
-          <div className="text-center mb-12">
-
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Our Work in Brisbane
-            </h2>
-
-            <p className="text-white/70 mt-4">
-              Real electrical projects delivered by our licensed team
-            </p>
-
-          </div>
-
-          {/* IMAGE GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            {[
-              "/about/work1.jpg",
-              "/about/work2.jpg",
-              "/about/work3.jpg",
-            ].map((img, i) => (
-              <div
-                key={i}
-                className="rounded-2xl overflow-hidden border border-brand-mid bg-brand-dark h-64"
-              >
-                <img
-                  src={img}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-
-          </div>
+          {/* supporting text */}
+          <p className="mt-5 text-white/60 leading-relaxed max-w-2xl mx-auto">
+            We focus on safety, precision, and professional workmanship —
+            ensuring every job is completed properly and every site is left clean and tidy.
+          </p>
 
         </div>
+<section className="px-6 mt-8">
+  <div className="max-w-3xl mx-auto">
+
+    <div className="overflow-hidden rounded-2xl border border-brand-mid bg-[#111]">
+      <img
+        src="/van.jpg"
+        alt="369 Electrical Service Vehicle"
+        className="w-full h-[260px] md:h-[380px] object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+        {/* section label */}
+          <p className="text-brand-yellow mt-8 text-xs font-bold tracking-[3px] uppercase mb-6">
+            Our Core Values
+          </p>
+
+
+
+        {/* ================= HOW WE WORK ================= */}
+<div className="max-w-5xl mx-auto px-6">
+
+  <div className="grid md:grid-cols-3 gap-6 text-left">
+
+    {/* CARD 1 */}
+    <div className="p-6 rounded-2xl bg-[#111] border border-blue-500/20 hover:border-blue-400/40 transition">
+
+      <h3 className="text-white font-semibold text-lg">
+        Work Safely & Comply
+      </h3>
+
+      <p className="text-white/60 text-sm mt-2 leading-relaxed">
+        Every job is completed to Australian standards with strict focus on safety,
+        compliance, and long-term reliability.
+      </p>
+
+    </div>
+
+    {/* CARD 2 */}
+    <div className="p-6 rounded-2xl bg-[#111] border border-white/20 hover:border-yellow-400/40 transition">
+
+      <h3 className="text-white font-semibold text-lg">
+        Clear Communication
+      </h3>
+
+      <p className="text-white/60 text-sm mt-2 leading-relaxed">
+        We provide upfront pricing, clear updates, and reliable workmanship from start to finish.
+      </p>
+
+    </div>
+
+    {/* CARD 3 */}
+    <div className="p-6 rounded-2xl bg-[#111] border border-green-500/20 hover:border-green-400/40 transition">
+
+      <h3 className="text-white font-semibold text-lg">
+        Finish Clean & Reset Space
+      </h3>
+
+      <p className="text-white/60 text-sm mt-2 leading-relaxed">
+        We always clean up properly and leave your space tidy — leave like ninja.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 
       </section>
+
+
 
       {/* ================= FAQ ================= */}
       <FAQ />

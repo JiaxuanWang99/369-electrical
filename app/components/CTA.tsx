@@ -10,7 +10,7 @@ export default function CTA() {
       <div className="max-w-5xl mx-auto px-6 text-center relative">
 
         <h2 className="text-3xl md:text-5xl font-bold leading-tight text-black">
-          Need an Electrician Today?
+          Ready to work with a team that actually cares?
         </h2>
 
         <p className="mt-5 text-black/80 text-lg max-w-2xl mx-auto">

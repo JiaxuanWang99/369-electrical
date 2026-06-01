@@ -6,6 +6,7 @@ import WhyChooseUs from "./components/WhyChooseUs"
 import Projects from "./components/Projects"
 import Testimonials from "./components/Testimonials"
 import CTA from "./components/CTA"
+import Pricing from "./components/Pricing"
 
 export default function Home() {
   return (

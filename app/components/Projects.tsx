@@ -48,7 +48,7 @@ export default function Projects() {
 
           <Swiper
             className="project-swiper"
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Pagination]}
             spaceBetween={30}
             slidesPerView={1}
             navigation
@@ -56,8 +56,6 @@ export default function Projects() {
               renderBullet: (index, className) => {
               return `<span class="${className}">⚡</span>`},
              }}
-            autoplay={{ delay: 4000 }}
-            loop
           >
 
             {projects.map((p, i) => (

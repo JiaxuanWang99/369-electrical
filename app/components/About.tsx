@@ -1,80 +1,165 @@
+'use client'
+import Image from 'next/image'
+
+const trustBadges = [
+  'QLD Licensed',
+  'Fully Insured',
+  'Residential & Commercial',
+  '24/7 Emergency Service',
+  'Fast Response',
+  'Free Quotes',
+  "Chinese & English Support",
+]
+
+const serviceAreas = [
+  'Brisbane CBD',
+  'Logan',
+  'Ipswich',
+  'Redlands',
+  'Gold Coast',
+  'Surrounding Areas',
+]
+
 export default function About() {
   return (
-    <section className="relative bg-brand-black text-white py-20 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.10),transparent_60%)]">
+    <section className="bg-[#0d0d0d] py-8 px-6 md:px-10">
+      <div className="max-w-6xl mx-auto">
 
-      {/* background glow */}
-      <div className="absolute inset-0 " />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#222222]">
 
-      <div className="max-w-6xl mx-auto px-6 relative">
+          {/* IMAGE */}
+          <div className="relative bg-[#111111] min-h-[320px] md:min-h-[450px] overflow-hidden">
 
-        {/* GRID - image bigger than text */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+            {/* Main Image */}
+            <Image
+              src="/about-electrician.jpg"
+              alt="369 Electrical Service"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
 
-          {/* LEFT IMAGE (bigger now) */}
-          <div className="md:col-span-6 relative">
+            {/* Bottom Label */}
+            <div className="absolute bottom-0 left-0 right-0 border-l-4 border-brand-yellow bg-black/85 px-5 py-4 z-10">
 
-            {/* glow */}
-            <div className="absolute -inset-8 bg-brand-yellow/10 blur-3xl rounded-full" />
+              <p className="text-white text-lg font-bold">
+                369 Electrical Service
+              </p>
 
-            <div className="relative h-[420px] md:h-[520px] rounded-2xl overflow-hidden border border-brand-mid bg-gradient-to-br from-brand-dark to-brand-mid shadow-lg">
+              <p className="text-brand-yellow text-xs uppercase tracking-[2px] mt-1">
+                Licensed • Brisbane • Queensland
+              </p>
 
-              {/* replace with real image */}
-              <img
-                src="/about-electrician.jpg"
-                className="w-full h-full object-cover"
-                alt="Electrician work in Brisbane"
-              />
+            </div>
 
-              {/* overlay label */}
-              <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur px-4 py-2 rounded-lg text-sm text-brand-yellow border border-brand-mid">
-                Licensed Brisbane Electricians
+          </div>
+
+          {/* CONTENT */}
+          <div className="bg-[#111111] px-8 md:px-12 py-10 md:py-12 flex flex-col justify-center">
+
+            {/* Eyebrow */}
+            <p className="text-brand-yellow text-sm font-bold uppercase tracking-[3px] mb-3">
+              Who We Are
+            </p>
+
+            {/* Heading */}
+            <h2 className="text-white text-3xl md:text-4xl font-black leading-tight mb-4">
+              A Local Team That{' '}
+              <span className="text-brand-yellow">
+                Actually Cares
+              </span>
+            </h2>
+
+            <div className="w-12 h-[3px] bg-brand-yellow mb-6" />
+
+            {/* Description */}
+            <p className="text-[#b5b5b5] text-base md:text-lg leading-relaxed mb-8">
+              We're local electricians committed to delivering safe,
+              reliable, and high-quality electrical work across Brisbane
+              and surrounding areas. Every job is completed with honesty,
+              professionalism, and attention to detail.
+            </p>
+
+            {/* TRUST BADGES */}
+            <div>
+
+              <p className="text-white font-semibold mb-3">
+                Why Choose Us
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+
+                {trustBadges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="
+                      border border-[#2e6644]
+                      bg-[#0a1f12]
+                      text-[#52E0A0]
+                      px-4 py-2
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    {badge}
+                  </span>
+                ))}
+
               </div>
 
             </div>
 
-          </div>
+            {/* SERVICE AREA */}
+            <div className="mt-8">
 
-          {/* RIGHT CONTENT */}
-          <div className="md:col-span-6">
+              <p className="text-white font-semibold mb-3">
+                Service Areas
+              </p>
 
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              Professional Electrical Services Across{" "}
-              <span className="text-brand-yellow">Brisbane</span>
-            </h2>
+              <div className="flex flex-wrap gap-3">
 
-            <p className="mt-5 text-text-secondary text-lg leading-relaxed">
-              We provide residential, commercial, and emergency electrical services across Brisbane with fast response and professional workmanship.
-            </p>
-
-            <p className="mt-4 text-text-secondary text-lg leading-relaxed">
-              Our licensed electricians ensure safe, compliant, and high-quality solutions for every project.
-            </p>
-
-            {/* FEATURE LIST (cleaner, tighter) */}
-            <div className="mt-8 space-y-3">
-
-              {[
-                "Licensed & insured electricians",
-                "24/7 emergency support across Brisbane",
-                "Residential & commercial expertise",
-                "Transparent pricing, no hidden costs",
-              ].map((text) => (
-                <div key={text} className="flex items-start gap-3">
-
-                  <span className="text-green-400 text-lg leading-none">✔</span>
-
-                  <span className="text-white text-base">
-                    {text}
+                {serviceAreas.map((area) => (
+                  <span
+                    key={area}
+                    className="
+                      border border-[#274b73]
+                      bg-[#0c1624]
+                      text-[#6FB8FF]
+                      px-4 py-2
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    {area}
                   </span>
+                ))}
 
-                </div>
-              ))}
+              </div>
 
             </div>
+
+            {/* Link */}
+            <a
+              href="/about"
+              className="
+                mt-8
+                text-sm
+                text-white/70
+                uppercase
+                tracking-wide
+                hover:text-brand-yellow
+                transition-colors
+                w-fit
+              "
+            >
+              Learn more about us →
+            </a>
 
           </div>
 
         </div>
+
       </div>
     </section>
   )

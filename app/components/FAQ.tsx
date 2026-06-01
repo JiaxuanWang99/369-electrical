@@ -11,7 +11,7 @@ export default function FAQ() {
   }
 
   return (
-    <section className="py-28 bg-brand-black">
+    <section className="pb-10 bg-brand-black">
 
       <div className="max-w-4xl mx-auto px-6">
 
@@ -56,11 +56,11 @@ export default function FAQ() {
                   "
                 >
 
-                  <h3 className="text-brand-yellow font-semibold text-xl md:text-2xl">
+                  <h3 className="text-brand-yellow font-semibold text-lg md:text-lg">
                     {item.question}
                   </h3>
 
-                  <span className="text-brand-yellow text-3xl leading-none">
+                  <span className="text-brand-yellow text-lg leading-none">
                     {isOpen ? "−" : "+"}
                   </span>
 
@@ -75,7 +75,7 @@ export default function FAQ() {
                     leading-relaxed
                     overflow-hidden
                     transition-all duration-300
-                   ${isOpen ? "max-h-[500px] pb-6 opacity-100" : "max-h-0 opacity-0"}
+                    ${isOpen ? "max-h-60 pb-6 opacity-100" : "max-h-0 opacity-0"}
                   `}
                 >
                   {item.answer}
